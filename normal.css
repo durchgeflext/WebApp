@@ -8,3 +8,24 @@ q {
     font-family: "Lucida Handwriting", cursive;
     font-variant: "Lucida Handwriting";
 }
+
+.header_container {
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+.main_container {
+    display: flex;
+    flex-direction: column;
+    background-color: crimson;
+}
+
+.header_section_flex {
+    padding: 10px;
+    background-color: green;
+}
+
+#bottom_line {
+    background-color: indianred;
+}
