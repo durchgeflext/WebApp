@@ -12,20 +12,47 @@ q {
 .header_container {
     display: flex;
     flex-direction: column;
-    background-color: blue;
+    /*background-color: blue;*/
 }
 
 .main_container {
     display: flex;
     flex-direction: column;
-    background-color: crimson;
+    /*background-color: crimson;*/
+
 }
 
 .header_section_flex {
     padding: 10px;
-    background-color: green;
+    /*background-color: green;*/
 }
 
 #bottom_line {
-    background-color: indianred;
+    /*background-color: indianred;*/
+}
+
+@media (max-width: 30rem) {
+    body{
+        overflow:hidden;
+        background-image: url(electric-gdf2b0e31d_1280.png);
+        background-position:center;
+    }
+}
+
+@media (min-width: 30rem) and (min-height: 30rem) {
+    body{
+        overflow:hidden;
+        background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
+        background-position: top;
+        background-repeat: repeat-y;
+    }
+}
+
+@media (min-width: 30rem) and (max-height: 30rem) {
+    body{
+        overflow:hidden;
+        background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
+        background-position: center;
+    }
+    
 }
