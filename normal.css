@@ -15,44 +15,71 @@ q {
     /*background-color: blue;*/
 }
 
+.wrapper {
+    width: 100%;
+    height: 100%;
+    position: relative;
+  }
+
 .main_container {
     display: flex;
     flex-direction: column;
-    /*background-color: crimson;*/
-
+    overflow: hidden;
+    text-shadow: 3px 3px 4px black;
 }
+
+/*.main_container_background {
+    background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    opacity: 0.5;
+}*/
 
 .header_section_flex {
     padding: 10px;
+
     /*background-color: green;*/
 }
 
-#bottom_line {
+.bottom_line {
     /*background-color: indianred;*/
 }
 
 @media (max-width: 30rem) {
-    body{
+    .main_container_background {
         overflow:hidden;
         background-image: url(electric-gdf2b0e31d_1280.png);
+        opacity: 0.5;
         background-position:center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media (min-width: 30rem) and (min-height: 30rem) {
-    body{
+    .main_container_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
+        opacity: 0.5;
         background-position: top;
         background-repeat: repeat-y;
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
 }
 
 @media (min-width: 30rem) and (max-height: 30rem) {
-    body{
+    .main_container_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
+        opacity: 0.5;
         background-position: center;
+        position: absolute;
+        width: 100%;
+        height: 100%;
     }
     
 }
