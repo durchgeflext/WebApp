@@ -1,58 +1,23 @@
-h1 {
-    color: #b52121;
-    text-align: center;
-}
-
-q {
-    font-style: italic;
-    font-family: "Lucida Handwriting", cursive;
-    font-variant: "Lucida Handwriting";
-}
-
-.header_container {
-    display: flex;
-    flex-direction: column;
-    /*background-color: blue;*/
-}
 
 .wrapper {
+    display:flex;
+    flex-direction: column;
+    justify-content: space-between;
     width: 100%;
     height: 100%;
     position: absolute;
     overflow: hidden;
+    background-color: lightgreen;
   }
 
-.main_container {
-    display: flex;
-    flex-direction: column;
-    overflow: hidden;
-    text-shadow: 3px 3px 4px black;
-}
 
-/*.main_container_background {
-    background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
-    position: absolute;
-    width: 100%;
-    height: 100%;
-    opacity: 0.5;
-}*/
 
-.header_section_flex {
-    padding: 10px;
-
-    /*background-color: green;*/
-}
-
-.bottom_line {
-    position: bottom;
-    /*background-color: indianred;*/
-}
-
+  /*Change that to portrait landscape?*/
 @media (max-width: 30rem) {
     .webpage_background {
         overflow:hidden;
         background-image: url(electric-gdf2b0e31d_1280.png);
-        opacity: 0.5;
+        opacity: 0.25;
         background-position:bottom;
         position: absolute;
         width: 100%;
@@ -65,7 +30,7 @@ q {
     .webpage_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
-        opacity: 0.5;
+        opacity: 0.25;
         background-position: bottom;
         position: absolute;
         width: 100%;
@@ -78,7 +43,7 @@ q {
     .webpage_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
-        opacity: 0.5;
+        opacity: 0.25;
         background-position: bottom;
         position: absolute;
         width: 100%;
@@ -87,3 +52,83 @@ q {
     }
     
 }
+
+.content {
+    margin: 0.5rem;
+    display:flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    height: 25rem;
+    background-color: black;
+}
+
+.header_container {
+    margin:0.25rem;
+    display: flex;
+    flex-direction: column;
+    background-color: blue;
+}
+
+
+h1 {
+    margin: 0.25rem;
+    color: #b52121;
+    text-align: center;
+    text-shadow: 2px 2px 4px #b52121;
+    background-color: blueviolet;
+}
+
+
+.header_section_flex {
+    margin:0.25rem;
+    text-align:center;
+    text-shadow: 2px 2px 4px black;
+    background-color: brown;
+
+}
+
+.main_container {
+    margin:0.25rem;
+    display: flex;
+    flex-direction: column;
+    text-shadow: 2px 2px 4px black;
+    background-color: lawngreen;
+}
+
+.main_section_flex {
+    margin:0.25rem;
+    text-align:center;
+    background-color: chocolate;
+}
+
+.button_div {
+    margin: 0.25em;
+    background-color: cyan;
+}
+
+.bottom_line {
+    margin:0.5em;
+    text-align:center;
+    background-color: indianred;
+    text-shadow: 2px 2px 4px black;
+}
+
+q {
+    font-style: italic;
+    font-family: "Lucida Handwriting", cursive;
+    font-variant: "Lucida Handwriting";
+
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
