@@ -1,5 +1,5 @@
 h1 {
-    color: #f10000;
+    color: #b52121;
     text-align: center;
 }
 
@@ -44,43 +44,46 @@ q {
 }
 
 .bottom_line {
+    position: bottom;
     /*background-color: indianred;*/
 }
 
 @media (max-width: 30rem) {
-    .main_container_background {
+    .webpage_background {
         overflow:hidden;
         background-image: url(electric-gdf2b0e31d_1280.png);
         opacity: 0.5;
-        background-position:center;
+        background-position:bottom;
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: -1;
     }
 }
 
 @media (min-width: 30rem) and (min-height: 30rem) {
-    .main_container_background {
+    .webpage_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
         opacity: 0.5;
-        background-position: top;
-        background-repeat: repeat-y;
+        background-position: bottom;
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: -1;
     }
 }
 
 @media (min-width: 30rem) and (max-height: 30rem) {
-    .main_container_background {
+    .webpage_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
         opacity: 0.5;
-        background-position: center;
+        background-position: bottom;
         position: absolute;
         width: 100%;
         height: 100%;
+        z-index: -1;
     }
     
 }
