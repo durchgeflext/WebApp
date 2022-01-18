@@ -7,23 +7,24 @@
     height: 100%;
     position: absolute;
     overflow: hidden;
+
     /*background-color: lightgreen;*/
   }
 
+.webpage_background {
+    opacity: 0.25;
+    background-position: bottom;
+    position: absolute;
+    width: 100%;
+    height: 100%;
+    z-index: -1;
+}
 
-
-  /*Change that to portrait landscape?*/
 /*Phone portrait*/  
 @media (max-width: 30rem) {
     .webpage_background {
         overflow:hidden;
         background-image: url(electric-gdf2b0e31d_1280.png);
-        opacity: 0.25;
-        background-position:bottom;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
     }
 }
 
@@ -32,12 +33,6 @@
     .webpage_background {
         overflow:hidden;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
-        opacity: 0.25;
-        background-position: bottom;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
     }
 }
 
@@ -46,23 +41,11 @@
     .webpage_background {
         overflow:scroll;
         background-image: url(guitar-gc1fc3185a_1920_cropped.jpg);
-        opacity: 0.25;
-        background-position: bottom;
-        position: absolute;
-        width: 100%;
-        height: 100%;
-        z-index: -1;
     }
 
     .wrapper {
-        /*display:flex;
-        flex-direction: column;
-        justify-content: space-between;
-        width: 100%;
-        height: 100%;*/
         position: relative;
         overflow: visible;
-        /*background-color: lightgreen;*/
       }
     
 }
@@ -73,6 +56,7 @@
     flex-direction: column;
     justify-content: space-evenly;
     height: 25rem;
+
     /*background-color: black;*/
 }
 
@@ -80,6 +64,7 @@
     margin:0.25rem;
     display: flex;
     flex-direction: column;
+
     /*background-color: blue;*/
 }
 
@@ -89,6 +74,7 @@ h1 {
     color: #b52121;
     text-align: center;
     text-shadow: 2px 2px 4px #b52121;
+
     /*background-color: blueviolet;*/
 }
 
@@ -97,6 +83,7 @@ h1 {
     margin:0.25rem;
     text-align:center;
     text-shadow: 2px 2px 4px black;
+
     /*background-color: brown;*/
 
 }
@@ -106,6 +93,7 @@ h1 {
     display: flex;
     flex-direction: column;
     text-shadow: 2px 2px 4px black;
+
     /*background-color: lawngreen;*/
 }
 
@@ -115,6 +103,7 @@ h1 {
     margin:0.25rem;
     text-align:center;
     align-items: center;
+
     /*background-color: chocolate;*/
 }
 
@@ -143,7 +132,7 @@ button:hover {
 .bottom_line {
     margin:0.5em;
     text-align:center;
-    text-shadow: 2px 2px 4px black;
+    text-shadow: 1px 1px 3px black;
 
     /*background-color: indianred;*/
 }
