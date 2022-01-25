@@ -40,6 +40,7 @@ function startCounter() {
 }
 
 function startCount() {
+    counter = 0;
     active = true;
 }
 
