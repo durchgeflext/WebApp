@@ -1,16 +1,18 @@
 var x = document.getElementById("div_stroke_results");
+var startBool = false;
+
+let acl = null;
 
 
-var az = 0;
-
-
-window.ondevicemotion = function(event) { 
-	//az = event.acceleration.z
-	//document.querySelector("#div_stroke_results").innerHTML = "Z = " + az;
-}
-
-
-function getAccel() {
-    x.innerHTML = "whore";
+function start() {
+    navigator.permissions.query({name: 'accelerometer'}).then(result => {
+        if(result.state === 'denied') {
+            x.innerHTML = "Permission Denied";
+        }
+    })
+    acl = new Accelerometer({frequency: 60});
+    acl.addEventListener('reading', () => {
+        x.innerHTML = "Fucker" + acl.z;
+    })
 }
 
