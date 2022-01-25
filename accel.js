@@ -2,7 +2,9 @@ var x = document.getElementById("div_stroke_results");
 var active = false;
 
 let acl = null;
-var az;
+
+var oldAz = 0;
+var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
@@ -46,7 +48,10 @@ function stopCount() {
 }
 
 function countShakes(az) {
-    counter++;
-    x.innerHTML = "Z = " + az + "Count = " + counter;
+    if(Math.sign(oldAz) != Math.sign(az) && Math.sign(oldAz) != 0) {
+        counter++;
+    }
+    oldAz = az;
+    x.innerHTML = "Z = " + az + "<br>Count = " + counter;
 }
 
