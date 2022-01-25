@@ -3,9 +3,19 @@ var startBool = false;
 
 let acl = null;
 
+window.ondevicemotion = function(event) {
+    var az = event.acceleration.z;
+    if(startBool) {
+        x.innerHTML = "Z = " + az;
+    }
+}
+
 
 function startCounter() {
-    navigator.permissions.query({name: 'accelerometer'}).then(result => {
+    startBool = true;
+    setTimeout(10000);
+    startBool = false;
+    /*navigator.permissions.query({name: 'accelerometer'}).then(result => {
         if(result.state === 'denied') {
             x.innerHTML = "Permission Denied";
         }
@@ -14,6 +24,6 @@ function startCounter() {
     acl.addEventListener('reading', () => {
         x.innerHTML = "Fucker" + acl.z;
     })
-    acl.start();
+    acl.start();*/
 }
 
