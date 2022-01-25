@@ -1,3 +1,5 @@
+var x = document.getElementById("div_stroke_results");
+
 
 var az = 0;
 
@@ -9,6 +11,6 @@ window.ondevicemotion = function(event) {
 
 
 function getAccel() {
-    document.querySelector("#div_stroke_results").innerHTML = "bitch" + az;
+    x.innerHTML = "bitch" + az;
 }
 
