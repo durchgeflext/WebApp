@@ -6,7 +6,12 @@ var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
-    az = (Math.abs(event.acceleration.z) > 2) ? event.acceleration.z : 0;
+    if (Math.abs(event.acceleration.z) > 2) {
+        az = event.acceleration.z;
+    } else {
+        az = 0;
+    }
+    
     if(active) {
         countShakes(az);
     }
