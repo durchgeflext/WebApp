@@ -3,11 +3,12 @@ var active = false;
 
 let acl = null;
 var az;
+var counter = 0;
 
 window.ondevicemotion = function(event) {
     az = event.acceleration.z;
     if(active) {
-        x.innerHTML = "Z = " + az;
+        countShakes(az);
     }
 }
 
@@ -44,7 +45,8 @@ function stopCount() {
     active = false;
 }
 
-function countShakes() {
-    x.innerHTML = "Z = " + az;
+function countShakes(az) {
+    counter++;
+    x.innerHTML = "Z = " + az + "Count = " + counter;
 }
 
