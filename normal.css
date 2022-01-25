@@ -107,8 +107,9 @@ h1 {
     /*background-color: chocolate;*/
 }
 
-#div_stroke_results {
+.result_class {
     font-size: large;
+    color:aqua;
 }
 
 button {
