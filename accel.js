@@ -6,7 +6,7 @@ var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
-    az = Math.abs(event.acceleration.z) > 2 ? event.acceleration.z : 0;
+    az = (Math.abs(event.acceleration.z) > 2) ? event.acceleration.z : 0;
     if(active) {
         countShakes(az);
     }
@@ -28,10 +28,10 @@ function stopCount() {
 }
 
 function countShakes(az) {
-    if((Math.sign(oldAz) != Math.sign(az)) && (Math.sign(oldAz) != 0 || Math.sign(az) == 0)) {
+    if((Math.sign(oldAz) != Math.sign(az)) && (Math.sign(oldAz) != 0 && Math.sign(az) != 0)) {
         counter++;
     }
     oldAz = az;
-    x.innerHTML = "Z = " + az + "<br>Count" + counter;
+    x.innerHTML = "Z = " + az + "<br>Count = " + counter;
 }
 
