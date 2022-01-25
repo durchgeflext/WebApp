@@ -2,9 +2,10 @@ var x = document.getElementById("div_stroke_results");
 var startBool = false;
 
 let acl = null;
+var az;
 
 window.ondevicemotion = function(event) {
-    var az = event.acceleration.z;
+    az = event.acceleration.z;
     if(startBool) {
         x.innerHTML = "Z = " + az;
     }
@@ -12,10 +13,14 @@ window.ondevicemotion = function(event) {
 
 
 function startCounter() {
-    startBool = true;
+
+    setInterval(countShakes, 10000);
+
+
+    /*startBool = true;
     setTimeout(2000);
     startBool = false;
-    x.innerHTML = "worked";
+    x.innerHTML = "worked";*/
 
     /*setTimeout(10000);
     startBool = false;*/
@@ -29,5 +34,9 @@ function startCounter() {
         x.innerHTML = "Fucker" + acl.z;
     })
     acl.start();*/
+}
+
+function countShakes() {
+    x.innerHTML = "Z = " + az;
 }
 
