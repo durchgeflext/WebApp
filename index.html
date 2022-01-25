@@ -12,6 +12,7 @@
 
         <link id="css" rel="stylesheet" type="text/css" href="normal.css">
         <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.3/jquery.min.js"></script>
+        <script src="accel.js" async></script>
     </head>
     <body>
         <div class="wrapper">
@@ -34,10 +35,12 @@
                     <section id="main_content", class="main_section_flex">
                         Number of strokes:<br>
                         <!--results-->
-                        RESULTS HERE
+                        <div id=div_stroke_results>
+                            <br>
+                        </div>
                         <br>
                         <br>
-                        <button id="start_button" class="containers">Start</button>
+                        <button id="start_button" class="containers" onclick="getAccel()">Start</button>
                     </section>
                 </main>
             </div>
