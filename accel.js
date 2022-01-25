@@ -1,20 +1,20 @@
 var x = document.getElementById("div_stroke_results");
-var startBool = false;
+var active = false;
 
 let acl = null;
 var az;
 
 window.ondevicemotion = function(event) {
     az = event.acceleration.z;
-    if(startBool) {
+    if(active) {
         x.innerHTML = "Z = " + az;
     }
 }
 
 
 function startCounter() {
-
-    setInterval(countShakes, 10000);
+    startCount();
+    setTimeout(stopCount, 10000);
 
 
     /*startBool = true;
@@ -34,6 +34,14 @@ function startCounter() {
         x.innerHTML = "Fucker" + acl.z;
     })
     acl.start();*/
+}
+
+function startCount() {
+    active = true;
+}
+
+function stopCount() {
+    active = false;
 }
 
 function countShakes() {
