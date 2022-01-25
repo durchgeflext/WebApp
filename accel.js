@@ -11,7 +11,7 @@ window.ondevicemotion = function(event) {
     } else {
         az = 0;
     }
-    
+
     if(active) {
         countShakes(az);
     }
@@ -37,6 +37,6 @@ function countShakes(az) {
         counter++;
     }
     oldAz = az;
-    x.innerHTML = "Z = " + az + "<br>Count = " + counter;
+    x.innerHTML = "" + counter;
 }
 
