@@ -6,7 +6,7 @@ var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
-    if(event.acceleration) {
+    if(!event.acceleration) {
         x.innerHTML = "NO ACCELEROMETER FOUND";
         return;
     } else {
