@@ -4,7 +4,7 @@ var startBool = false;
 let acl = null;
 
 
-function start() {
+function startCounter() {
     navigator.permissions.query({name: 'accelerometer'}).then(result => {
         if(result.state === 'denied') {
             x.innerHTML = "Permission Denied";
@@ -14,5 +14,6 @@ function start() {
     acl.addEventListener('reading', () => {
         x.innerHTML = "Fucker" + acl.z;
     })
+    acl.start();
 }
 
