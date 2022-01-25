@@ -8,6 +8,7 @@ var counter = 0;
 window.ondevicemotion = function(event) {
     if(!event.acceleration) {
         x.innerHTML = "NO ACCELEROMETER FOUND";
+        return;
     } else {
         if (Math.abs(event.acceleration.z) > 2) {
             az = event.acceleration.z;
