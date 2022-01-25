@@ -9,6 +9,7 @@ var counter = 0;
 
 window.ondevicemotion = function(event) {
     az = event.acceleration.z;
+    az = Math.round(az * 100) / 100;
     if(active) {
         countShakes(az);
     }
