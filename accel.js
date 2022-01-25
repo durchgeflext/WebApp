@@ -32,6 +32,6 @@ function countShakes(az) {
         counter++;
     }
     oldAz = az;
-    x.innerHTML = "" + counter + "<br>Z = " + az;
+    x.innerHTML = "Z = " + az + "<br>Count" + counter;
 }
 
