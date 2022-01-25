@@ -13,6 +13,10 @@ window.ondevicemotion = function(event) {
 
 function startCounter() {
     startBool = true;
+    setTimeout(2000);
+    startBool = false;
+    x.innerHTML = "worked";
+
     /*setTimeout(10000);
     startBool = false;*/
     /*navigator.permissions.query({name: 'accelerometer'}).then(result => {
