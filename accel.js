@@ -28,10 +28,10 @@ function stopCount() {
 }
 
 function countShakes(az) {
-    if(Math.sign(oldAz) != Math.sign(az) && Math.sign(oldAz) != 0) {
+    if((Math.sign(oldAz) != Math.sign(az)) && (Math.sign(oldAz) != 0 || Math.sign(az) == 0)) {
         counter++;
     }
     oldAz = az;
-    x.innerHTML = counter.toString();
+    x.innerHTML = counter.toString() + "<br>Z = " + az;
 }
 
