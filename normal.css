@@ -107,6 +107,10 @@ h1 {
     /*background-color: chocolate;*/
 }
 
+#div_stroke_results {
+    font-size: medium;
+}
+
 button {
     margin: 0.25em;
     background-color: green;
