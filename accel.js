@@ -6,7 +6,7 @@ var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
-    if("accelerometer" in window) {
+    if("Accelerometer" in window) {
         if (Math.abs(event.acceleration.z) > 2) {
             az = event.acceleration.z;
         } else {
