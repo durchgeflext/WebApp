@@ -6,21 +6,23 @@ var az = 0;
 var counter = 0;
 
 window.ondevicemotion = function(event) {
-    if(!event.acceleration) {
-        x.innerHTML = "NO ACCELEROMETER FOUND";
-        return;
-    } else {
+    if("accelerometer" in window) {
         if (Math.abs(event.acceleration.z) > 2) {
             az = event.acceleration.z;
         } else {
             az = 0;
         }
-
+        
         if(active) {
             countShakes(az);
         }
+    } else {
+        x.innerHTML = "NO ACCELEROMETER FOUND";
+        return;
     }
 }
+
+
 
 
 function startCounter() {
